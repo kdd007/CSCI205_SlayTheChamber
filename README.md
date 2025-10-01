@@ -14,7 +14,7 @@
 
 ## Documentation
 Full documentation is available here:  
-[Project Documentation (Google Drive)]([https://drive.google.com/drive/folders/1QU2lCVfdOo0s7R9rOOcZjSfd_Pcv7pvc?dmr=1&ec=wgc-drive-hero-goto](https://drive.google.com/drive/folders/1szk2bYzFgKqrAsJuN1DjEMqxpcYs0ufR?dmr=1&ec=wgc-drive-hero-goto))
+[Project Documentation (Google Drive)](https://drive.google.com/drive/folders/1szk2bYzFgKqrAsJuN1DjEMqxpcYs0ufR?dmr=1&ec=wgc-drive-hero-goto)
 
 ---
 
