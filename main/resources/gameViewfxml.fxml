@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.FinalProject.gameViewController">
+   <StackPane fx:id="mainScreen" prefHeight="150.0" prefWidth="200.0">
+      <children>
+         <BorderPane>
+            <top>
+               <HBox alignment="CENTER_RIGHT" maxHeight="40.0" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                  <children>
+                     <Button fx:id="resetButton" mnemonicParsing="false" text="Reset">
+                        <HBox.margin>
+                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </HBox.margin>
+                     </Button>
+                  </children>
+               </HBox>
+            </top>
+            <left>
+               <HBox maxWidth="50.0" minWidth="50.0" prefHeight="100.0" BorderPane.alignment="CENTER" />
+            </left>
+            <center>
+               <HBox alignment="BOTTOM_CENTER" fillHeight="false" minHeight="300.0" prefHeight="100.0" prefWidth="200.0" spacing="40.0" BorderPane.alignment="CENTER">
+                  <children>
+                     <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0">
+                        <children>
+                           <StackPane prefHeight="150.0" prefWidth="250.0">
+                              <children>
+                                 <ImageView fx:id="playerImage" fitHeight="250.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@images/Files/player/The%20Silent%20Idle.gif" />
+                                    </image>
+                                 </ImageView>
+                                 <ImageView fx:id="playerEffect" fitHeight="258.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
+                              </children>
+                           </StackPane>
+                           <HBox alignment="CENTER" pickOnBounds="false" prefHeight="100.0" prefWidth="200.0">
+                              <children>
+                                 <StackPane prefHeight="20.0">
+                                    <children>
+                                       <ImageView fx:id="shieldIcon" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+                                       <Circle fill="DODGERBLUE" opacity="0.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                                       <Text fx:id="playerDefense" strokeType="OUTSIDE" strokeWidth="0.0" text="D" />
+                                    </children>
+                                    <HBox.margin>
+                                       <Insets right="10.0" />
+                                    </HBox.margin>
+                                 </StackPane>
+                                 <ProgressBar fx:id="playerHealth" prefWidth="200.0" progress="1.0" />
+                                 <Text fx:id="playerHealthText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              </children>
+                           </HBox>
+                        </children>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                     </VBox>
+                     <VBox prefHeight="200.0" prefWidth="500.0" />
+                     <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                        <children>
+                           <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                              <children>
+                                 <Text fx:id="intentText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="intentText1">
+                                    <font>
+                                       <Font size="18.0" />
+                                    </font>
+                                 </Text>
+                                 <ImageView fx:id="intentAttack" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                              </children>
+                           </HBox>
+                           <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                              <children>
+                                 <Text fx:id="intentText2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="intentText2">
+                                    <font>
+                                       <Font size="18.0" />
+                                    </font>
+                                 </Text>
+                                 <ImageView fx:id="intentDefend" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                              </children>
+                           </HBox>
+                           <StackPane prefHeight="150.0" prefWidth="200.0">
+                              <children>
+                                 <ImageView fx:id="monsterImage" fitHeight="250.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@images/Files/monster/monsterIdle.gif" />
+                                    </image>
+                                 </ImageView>
+                                 <ImageView fx:id="monsterReaction" fitHeight="250.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+                              </children>
+                           </StackPane>
+                           <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                              <children>
+                                 <Text fx:id="monsterHealthText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                    <HBox.margin>
+                                       <Insets right="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                                 <ProgressBar fx:id="monsterHealth" prefWidth="200.0" progress="1.0" />
+                                 <StackPane prefHeight="20.0">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                    <children>
+                                       <ImageView fx:id="shieldIconMonster" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+                                       <Circle fill="DODGERBLUE" opacity="0.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                                       <Text fx:id="monsterDefense" strokeType="OUTSIDE" strokeWidth="0.0" text="D" />
+                                    </children>
+                                    <opaqueInsets>
+                                       <Insets />
+                                    </opaqueInsets>
+                                 </StackPane>
+                              </children>
+                           </HBox>
+                        </children>
+                     </VBox>
+                  </children>
+                  <padding>
+                     <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                  </padding>
+                  <BorderPane.margin>
+                     <Insets />
+                  </BorderPane.margin>
+               </HBox>
+            </center>
+            <right>
+               <HBox minHeight="100.0" minWidth="50.0" prefHeight="100.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+            </right>
+            <bottom>
+               <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                  <children>
+                     <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                        <children>
+                           <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Energy">
+                              <VBox.margin>
+                                 <Insets bottom="10.0" />
+                              </VBox.margin>
+                              <font>
+                                 <Font name="Lucida Bright" size="16.0" />
+                              </font>
+                           </Text>
+                           <StackPane>
+                              <children>
+                                 <Circle radius="30.0" stroke="BLACK" strokeType="INSIDE">
+                                    <fill>
+                                       <RadialGradient centerX="0.5" centerY="0.5" radius="0.339449558783015">
+                                          <stops>
+                                             <Stop>
+                                                <color>
+                                                   <Color red="0.9200000166893005" green="0.7740612626075745" blue="0.2484000027179718" />
+                                                </color>
+                                             </Stop>
+                                             <Stop offset="1.0">
+                                                <color>
+                                                   <Color red="0.9215686321258545" green="0.5490196347236633" blue="0.24705882370471954" />
+                                                </color>
+                                             </Stop>
+                                          </stops>
+                                       </RadialGradient>
+                                    </fill></Circle>
+                                 <Text fx:id="energyNum" strokeType="OUTSIDE" strokeWidth="0.0" text="E/N">
+                                    <font>
+                                       <Font name="Lucida Bright" size="16.0" />
+                                    </font></Text>
+                              </children>
+                           </StackPane>
+                           <Separator prefWidth="200.0">
+                              <VBox.margin>
+                                 <Insets bottom="10.0" top="10.0" />
+                              </VBox.margin>
+                           </Separator>
+                           <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Deck">
+                              <VBox.margin>
+                                 <Insets bottom="10.0" />
+                              </VBox.margin>
+                              <font>
+                                 <Font name="Lucida Bright" size="16.0" />
+                              </font>
+                           </Text>
+                           <StackPane>
+                              <children>
+                                 <Rectangle arcHeight="5.0" arcWidth="5.0" height="60.0" stroke="BLACK" strokeType="INSIDE" width="50.0">
+                                    <fill>
+                                       <RadialGradient centerX="0.5" centerY="0.5" radius="0.5458715596330276">
+                                          <stops>
+                                             <Stop>
+                                                <color>
+                                                   <Color red="0.9411764740943909" green="0.8745098114013672" blue="0.3019607961177826" />
+                                                </color>
+                                             </Stop>
+                                             <Stop offset="1.0">
+                                                <color>
+                                                   <Color red="0.8736842274665833" green="0.7640961408615112" blue="0.4627290368080139" />
+                                                </color>
+                                             </Stop>
+                                          </stops>
+                                       </RadialGradient>
+                                    </fill>
+                                 </Rectangle>
+                                 <Text fx:id="deck" strokeType="OUTSIDE" strokeWidth="0.0" text="X/N" textAlignment="CENTER">
+                                    <font>
+                                       <Font name="Lucida Bright" size="16.0" />
+                                    </font></Text>
+                              </children>
+                           </StackPane>
+                        </children>
+                        <HBox.margin>
+                           <Insets left="10.0" right="10.0" />
+                        </HBox.margin>
+                     </VBox>
+                     <VBox fx:id="vBoxCard0" prefHeight="200.0" prefWidth="160.0" style="-fx-background-radius: 10; -fx-background-color: radial-gradient(focus-distance 0% , center 50% 50% , radius 100% , #dad7be,  #898573 ); -fx-border-color: black; -fx-border-width: .75; -fx-border-radius: 10;">
+                        <children>
+                           <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #898573; -fx-background-radius: 10;">
+                              <children>
+                                 <StackPane prefHeight="150.0" prefWidth="20.0">
+                                    <children>
+                                       <Circle fill="#eb8c3f" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                                       <Text fx:id="textEnergy0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="E" textAlignment="CENTER" />
+                                    </children>
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </StackPane>
+                                 <Text fx:id="textActionName0" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Action Name">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                    <font>
+                                       <Font name="Lucida Bright" size="21.0" />
+                                    </font>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <ImageView fx:id="imageCard0" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../../../../../Sword-177497814-246599646.jpg" />
+                              </image>
+                              <VBox.margin>
+                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                              </VBox.margin>
+                              <effect>
+                                 <DropShadow height="20.0" radius="9.5" width="20.0" />
+                              </effect>
+                           </ImageView>
+                           <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                              <children>
+                                 <Text fx:id="textAction0" strokeType="OUTSIDE" strokeWidth="0.0" text="Action">
+                                    <VBox.margin>
+                                       <Insets bottom="5.0" />
+                                    </VBox.margin>
+                                    <font>
+                                       <Font name="Lucida Bright" size="12.0" />
+                                    </font>
+                                 </Text>
+                                 <Text fx:id="textDesc0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description for X">
+                                    <font>
+                                       <Font name="Lucida Bright" size="18.0" />
+                                    </font>
+                                    <VBox.margin>
+                                       <Insets bottom="10.0" />
+                                    </VBox.margin>
+                                 </Text>
+                              </children>
+                              <VBox.margin>
+                                 <Insets />
+                              </VBox.margin>
+                           </VBox>
+                        </children>
+                        <HBox.margin>
+                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </HBox.margin>
+                        <effect>
+                           <DropShadow height="29.32" radius="14.16" spread="0.8" width="29.32">
+                              <color>
+                                 <Color red="0.5529412031173706" green="1.0" blue="0.5098039507865906" />
+                              </color>
+                           </DropShadow>
+                        </effect>
+                     </VBox>
+                     <VBox fx:id="vBoxCard1" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: radial-gradient(focus-distance 0% , center 50% 50% , radius 100% , #dad7be,  #898573 ); -fx-border-width: .75; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10;">
+                        <children>
+                           <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #898573; -fx-background-radius: 10;">
+                              <children>
+                                 <StackPane prefHeight="150.0" prefWidth="20.0">
+                                    <children>
+                                       <Circle fill="#eb8c3f" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                                       <Text fx:id="textEnergy1" strokeType="OUTSIDE" strokeWidth="0.0" text="E" />
+                                    </children>
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </StackPane>
+                                 <Text fx:id="textActionName1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Action Name">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                    <font>
+                                       <Font name="Lucida Bright" size="21.0" />
+                                    </font>
+                                 </Text>
+                              </children>
+                              <VBox.margin>
+                                 <Insets />
+                              </VBox.margin>
+                           </HBox>
+                           <ImageView fx:id="imageCard1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../../../../../Sword-177497814-246599646.jpg" />
+                              </image>
+                              <VBox.margin>
+                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                              </VBox.margin>
+                              <effect>
+                                 <DropShadow height="20.0" radius="9.5" width="20.0" />
+                              </effect>
+                           </ImageView>
+                           <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                              <children>
+                                 <Text fx:id="textAction1" strokeType="OUTSIDE" strokeWidth="0.0" text="Action">
+                                    <VBox.margin>
+                                       <Insets bottom="5.0" />
+                                    </VBox.margin>
+                                    <font>
+                                       <Font name="Lucida Bright" size="12.0" />
+                                    </font>
+                                 </Text>
+                                 <Text fx:id="textDesc1" strokeType="OUTSIDE" strokeWidth="0.0" text="Description for X">
+                                    <font>
+                                       <Font name="Lucida Bright" size="18.0" />
+                                    </font>
+                                    <VBox.margin>
+                                       <Insets bottom="10.0" />
+                                    </VBox.margin>
+                                 </Text>
+                              </children>
+                           </VBox>
+                        </children>
+                        <HBox.margin>
+                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </HBox.margin>
+                        <effect>
+                           <DropShadow height="29.32" radius="14.16" spread="0.8" width="29.32">
+                              <color>
+                                 <Color red="0.5529412031173706" green="1.0" blue="0.5098039507865906" />
+                              </color>
+                           </DropShadow>
+                        </effect>
+                     </VBox>
+                     <VBox fx:id="vBoxCard2" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: radial-gradient(focus-distance 0% , center 50% 50% , radius 100% , #dad7be,  #898573 ); -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: .75;">
+                        <children>
+                           <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #898573; -fx-background-radius: 10;">
+                              <children>
+                                 <StackPane prefHeight="150.0" prefWidth="20.0">
+                                    <children>
+                                       <Circle fill="#eb8c3f" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                                       <Text fx:id="textEnergy2" strokeType="OUTSIDE" strokeWidth="0.0" text="E" />
+                                    </children>
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </StackPane>
+                                 <Text fx:id="textActionName2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Action Name">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                    <font>
+                                       <Font name="Lucida Bright" size="21.0" />
+                                    </font>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <ImageView fx:id="imageCard2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../../../../../Sword-177497814-246599646.jpg" />
+                              </image>
+                              <VBox.margin>
+                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                              </VBox.margin>
+                              <effect>
+                                 <DropShadow height="20.0" radius="9.5" width="20.0" />
+                              </effect>
+                           </ImageView>
+                           <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                              <children>
+                                 <Text fx:id="textAction2" strokeType="OUTSIDE" strokeWidth="0.0" text="Action">
+                                    <VBox.margin>
+                                       <Insets bottom="5.0" />
+                                    </VBox.margin>
+                                    <font>
+                                       <Font name="Lucida Bright" size="12.0" />
+                                    </font>
+                                 </Text>
+                                 <Text fx:id="textDesc2" strokeType="OUTSIDE" strokeWidth="0.0" text="Description for X">
+                                    <font>
+                                       <Font name="Lucida Bright" size="18.0" />
+                                    </font>
+                                    <VBox.margin>
+                                       <Insets bottom="10.0" />
+                                    </VBox.margin>
+                                 </Text>
+                              </children>
+                           </VBox>
+                        </children>
+                        <HBox.margin>
+                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </HBox.margin>
+                        <effect>
+                           <DropShadow height="29.32" radius="14.16" spread="0.8" width="29.32">
+                              <color>
+                                 <Color red="0.5529412031173706" green="1.0" blue="0.5098039507865906" />
+                              </color>
+                           </DropShadow>
+                        </effect>
+                     </VBox>
+                     <VBox fx:id="vBoxCard3" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: radial-gradient(focus-distance 0% , center 50% 50% , radius 100% , #dad7be,  #898573 ); -fx-background-radius: 10; -fx-border-color: black; -fx-border-width: .75; -fx-border-radius: 10;">
+                        <children>
+                           <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #898573; -fx-background-radius: 10;">
+                              <children>
+                                 <StackPane prefHeight="150.0" prefWidth="20.0">
+                                    <children>
+                                       <Circle fill="#eb8c3f" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                                       <Text fx:id="textEnergy3" strokeType="OUTSIDE" strokeWidth="0.0" text="E" />
+                                    </children>
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </StackPane>
+                                 <Text fx:id="textActionName3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Action Name">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                    <font>
+                                       <Font name="Lucida Bright" size="21.0" />
+                                    </font>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <ImageView fx:id="imageCard3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../../../../../Sword-177497814-246599646.jpg" />
+                              </image>
+                              <VBox.margin>
+                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                              </VBox.margin>
+                              <effect>
+                                 <DropShadow height="20.0" radius="9.5" width="20.0" />
+                              </effect>
+                           </ImageView>
+                           <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                              <children>
+                                 <Text fx:id="textAction3" strokeType="OUTSIDE" strokeWidth="0.0" text="Action">
+                                    <VBox.margin>
+                                       <Insets bottom="5.0" />
+                                    </VBox.margin>
+                                    <font>
+                                       <Font name="Lucida Bright" size="12.0" />
+                                    </font>
+                                 </Text>
+                                 <Text fx:id="textDesc3" strokeType="OUTSIDE" strokeWidth="0.0" text="Description for X">
+                                    <font>
+                                       <Font name="Lucida Bright" size="18.0" />
+                                    </font>
+                                    <VBox.margin>
+                                       <Insets bottom="10.0" />
+                                    </VBox.margin>
+                                 </Text>
+                              </children>
+                           </VBox>
+                        </children>
+                        <HBox.margin>
+                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </HBox.margin>
+                        <effect>
+                           <DropShadow height="29.32" radius="14.16" spread="0.8" width="29.32">
+                              <color>
+                                 <Color red="0.5529412031173706" green="1.0" blue="0.5098039507865906" />
+                              </color>
+                           </DropShadow>
+                        </effect>
+                     </VBox>
+                     <VBox fx:id="vBoxCard4" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: radial-gradient(focus-distance 0% , center 50% 50% , radius 100% , #dad7be,  #898573 ); -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: black; fx-border-width: .75;">
+                        <children>
+                           <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #898573; -fx-background-radius: 10;">
+                              <children>
+                                 <StackPane prefHeight="150.0" prefWidth="20.0">
+                                    <children>
+                                       <Circle fill="#eb8c3f" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                                       <Text fx:id="textEnergy4" strokeType="OUTSIDE" strokeWidth="0.0" text="E" />
+                                    </children>
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </StackPane>
+                                 <Text fx:id="textActionName4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Action Name">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                    <font>
+                                       <Font name="Lucida Bright" size="21.0" />
+                                    </font>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <ImageView fx:id="imageCard4" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../../../Sword-177497814-246599646.jpg" />
+                              </image>
+                              <VBox.margin>
+                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                              </VBox.margin>
+                              <effect>
+                                 <DropShadow height="20.0" radius="9.5" width="20.0" />
+                              </effect>
+                           </ImageView>
+                           <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                              <children>
+                                 <Text fx:id="textAction4" strokeType="OUTSIDE" strokeWidth="0.0" text="Action">
+                                    <VBox.margin>
+                                       <Insets bottom="5.0" />
+                                    </VBox.margin>
+                                    <font>
+                                       <Font name="Lucida Bright" size="12.0" />
+                                    </font>
+                                 </Text>
+                                 <Text fx:id="textDesc4" strokeType="OUTSIDE" strokeWidth="0.0" text="Description for X">
+                                    <font>
+                                       <Font name="Lucida Bright" size="18.0" />
+                                    </font>
+                                    <VBox.margin>
+                                       <Insets bottom="10.0" />
+                                    </VBox.margin>
+                                 </Text>
+                              </children>
+                           </VBox>
+                        </children>
+                        <HBox.margin>
+                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </HBox.margin>
+                        <effect>
+                           <DropShadow height="29.32" radius="14.16" spread="0.8" width="29.32">
+                              <color>
+                                 <Color red="0.5529412031173706" green="1.0" blue="0.5098039507865906" />
+                              </color>
+                           </DropShadow>
+                        </effect>
+                     </VBox>
+                     <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                        <children>
+                           <StackPane>
+                              <children>
+                                 <Rectangle arcHeight="5.0" arcWidth="5.0" height="30.0" stroke="BLACK" strokeType="INSIDE" width="70.0">
+                                    <fill>
+                                       <LinearGradient endX="0.602272655024673" endY="0.56060605970296" startX="0.4696970207221581" startY="0.41287880955320416">
+                                          <stops>
+                                             <Stop>
+                                                <color>
+                                                   <Color red="0.6105263233184814" green="0.11079922318458557" blue="0.11079922318458557" />
+                                                </color>
+                                             </Stop>
+                                             <Stop offset="1.0">
+                                                <color>
+                                                   <Color red="0.686274528503418" green="0.13333334028720856" blue="0.13333334028720856" />
+                                                </color>
+                                             </Stop>
+                                          </stops>
+                                       </LinearGradient>
+                                    </fill></Rectangle>
+                                 <Text fx:id="endButton" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="End Turn">
+                                    <font>
+                                       <Font name="Lucida Bright Demibold" size="12.0" />
+                                    </font></Text>
+                              </children>
+                           </StackPane>
+                           <Separator prefWidth="200.0">
+                              <VBox.margin>
+                                 <Insets bottom="10.0" top="10.0" />
+                              </VBox.margin>
+                           </Separator>
+                           <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Discard">
+                              <VBox.margin>
+                                 <Insets bottom="10.0" />
+                              </VBox.margin>
+                              <font>
+                                 <Font name="Lucida Bright" size="16.0" />
+                              </font>
+                           </Text>
+                           <StackPane>
+                              <children>
+                                 <Circle radius="30.0" stroke="BLACK" strokeType="INSIDE">
+                                    <fill>
+                                       <RadialGradient centerX="0.5" centerY="0.5" radius="0.7981651551132902">
+                                          <stops>
+                                             <Stop>
+                                                <color>
+                                                   <Color red="0.7176470756530762" green="0.40392157435417175" blue="0.14901961386203766" />
+                                                </color>
+                                             </Stop>
+                                             <Stop offset="0.006729475100942127">
+                                                <color>
+                                                   <Color red="0.7176470756530762" green="0.40392157435417175" blue="0.14901961386203766" />
+                                                </color>
+                                             </Stop>
+                                             <Stop offset="0.901749663526245">
+                                                <color>
+                                                   <Color red="0.4526315927505493" green="0.2394476979970932" blue="0.08717349171638489" />
+                                                </color>
+                                             </Stop>
+                                             <Stop offset="1.0">
+                                                <color>
+                                                   <Color red="0.4526315927505493" green="0.2394476979970932" blue="0.08717349171638489" />
+                                                </color>
+                                             </Stop>
+                                          </stops>
+                                       </RadialGradient>
+                                    </fill></Circle>
+                                 <Text fx:id="discard" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="X/N">
+                                    <font>
+                                       <Font name="Lucida Bright" size="16.0" />
+                                    </font></Text>
+                              </children>
+                           </StackPane>
+                        </children>
+                        <HBox.margin>
+                           <Insets left="10.0" right="10.0" />
+                        </HBox.margin>
+                     </VBox>
+                  </children>
+               </HBox>
+            </bottom>
+         </BorderPane>
+      </children>
+   </StackPane>
+   <StackPane fx:id="endScreen" disable="true" prefHeight="150.0" prefWidth="200.0" visible="false">
+      <children>
+         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <children>
+               <Text fx:id="endText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="endText">
+                  <font>
+                     <Font size="48.0" />
+                  </font>
+               </Text>
+               <Text fx:id="scoreText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="scoreText">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Text>
+               <Button fx:id="playButton" mnemonicParsing="false" text="Play Again" />
+            </children>
+         </VBox>
+      </children>
+   </StackPane>
+</StackPane>

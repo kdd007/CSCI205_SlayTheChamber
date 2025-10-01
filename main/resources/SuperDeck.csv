@@ -1,0 +1,19 @@
+Card Name,Card Type,Energy,Defense,Attack,Card Description,Modifier,Image Path
+Slash,Attack,1,0,6,Attack for 6,None,AddMe.jpg
+Block,Defense,1,5,0,Defend for 5,None,spireDefend.png
+Bludgeon,Attack,2,0,15,Attack for 15,None,AddMe.jpg
+Parry Riposte,Attack,2,7,6,Attack for 6 Defend for 7,None,AddMe.jpg
+Slash,Attack,1,0,6,Attack for 6,None,AddMe.jpg
+Block,Defense,1,5,0,Defend for 5,None,spireDefend.png
+Slash,Attack,1,0,6,Attack for 6,None,AddMe.jpg
+Block,Defense,1,5,0,Defend for 5,None,spireDefend.png
+Crush,Attack,3,0,24,Attack for 24,None,AddMe.jpg
+Slash,Attack,1,0,6,Attack for 6,None,AddMe.jpg
+Block,Defense,1,5,0,Defend for 5,None,spireDefend.png
+Wall Up,Defense,2,15,0,Defend for 15,None,spireDefend.png
+Cry,Defense,0,3,0,Defend for 3,None,spireDefend.png
+Flick,Attack,0,0,3,Attack for 3,None,AddMe.jpg
+Block,Defense,1,5,0,Defend for 5,None,spireDefend.png
+Pierce,Attack,1,0,2,Remove block Attack for 2,Remove,AddMe.jpg
+Heal,Skill,1,3,4,Heal for 4 Defend for 3,Recovery,spireDefend.png
+Gamble,Skill,0,0,0,Discard Hand and Redraw,Gamble,spireDefend.png

@@ -1,0 +1,6 @@
+Card Name,Card Type,Energy,Defense,Attack,Card Description,Modifier
+Egg Toss,Attack,1,0,10,TASTE EGG SHELL,Single Target
+"""HONK!""",Attack,3,0,20,i'mma duck... quack,AOE
+Egg Shell,Defense,1,8,0,Gain 8 Block,Self
+Workaholic,Skill,1,3,2,"Lose 3 HP and 2 Card",Draw
+Feast,Skill,2,0,10,Recover 10 HP,Recovery

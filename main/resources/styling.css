@@ -1,0 +1,6 @@
+.root {
+    -fx-background-color: #00ff00;
+    -fx-background-image: url("images/Files/background/slayTheSpireMoreFloor.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
